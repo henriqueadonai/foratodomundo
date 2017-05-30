@@ -5,25 +5,40 @@ import 'tachyons';
 import ListaPresidente from './ListaPresidentes';
 
 
+
 class App extends Component {
 
   constructor(props){
-    super(props);
+    super(props); 
     this.state ={
       presidentes : []
     }
 
-    presidentes : [
+  
+    this.state.presidentes = [
       {id:1, nome:'Tancredo Neves', foto:'./img/Presidentes/TancredoNeves.jpg',mandato:'Não Assumiu'},
       {id:2, nome:'Sarney' , foto:'./img/Presidentes/Sarney.jpg',mandato:'1985-1990'}, 
       {id:3, nome:'Fernando Collor' , foto:'./img/Presidentes/Fernando_collor.jpg',mandato:'1990-1992'},
       {id:4, nome:'Itamar Franco' , foto:'./img/Presidentes/ItamarFranco.jpg',mandato:'1992-1994'},
       {id:5, nome:'Fernando Henrique' , foto:'./img/Presidentes/FernandoHenrique.jpg',mandato:'1994-2002'},
-      {id:6, nome:'Lula', foto:'',mandato:'./img/Presidentes/Lula.jpg', mandato:'2002-2010'},
-      {id:7, nome:'Dima', foto:'',mandato:'./img/Presidentes/Dilma.jpg', mandato:'2011-2016'},
-      {id:7, nome:'Temer', foto:'',mandato:'./img/Presidentes/Temer.jpg', mandato:'Atualidade'}
+      {id:6, nome:'Lula', foto:'./img/Presidentes/Lula.jpg', mandato:'2002-2010'},
+      {id:7, nome:'Dima', foto:'./img/Presidentes/Dilma.jpg', mandato:'2011-2016'},
+      {id:7, nome:'Temer', foto:'./img/Presidentes/Temer.jpg', mandato:'Atualidade'}
     ]
-  }
+
+  // setTimeout(() => {
+  //   presidentes : [
+  //     {id:1, nome:'Tancredo Neves', foto:'./img/Presidentes/TancredoNeves.jpg',mandato:'Não Assumiu'},
+  //     {id:2, nome:'Sarney' , foto:'./img/Presidentes/Sarney.jpg',mandato:'1985-1990'}, 
+  //     {id:3, nome:'Fernando Collor' , foto:'./img/Presidentes/Fernando_collor.jpg',mandato:'1990-1992'},
+  //     {id:4, nome:'Itamar Franco' , foto:'./img/Presidentes/ItamarFranco.jpg',mandato:'1992-1994'},
+  //     {id:5, nome:'Fernando Henrique' , foto:'./img/Presidentes/FernandoHenrique.jpg',mandato:'1994-2002'},
+  //     {id:6, nome:'Lula', foto:'./img/Presidentes/Lula.jpg', mandato:'2002-2010'},
+  //     {id:7, nome:'Dima', foto:'./img/Presidentes/Dilma.jpg', mandato:'2011-2016'},
+  //     {id:7, nome:'Temer', foto:'./img/Presidentes/Temer.jpg', mandato:'Atualidade'}
+  //   ]
+  // },2000);
+}
 
   render() {
     return (
@@ -49,7 +64,7 @@ class App extends Component {
         </header>
 
         <ListaPresidente presidentes={this.state.presidentes}/>
- 
+       
 
 
         <footer className="pv4 ph3 ph5-m ph6-l mid-gray">
