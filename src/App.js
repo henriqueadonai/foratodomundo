@@ -62,9 +62,11 @@ class App extends Component {
             <a className="f6 f5-l link bg-animate black-80 hover-bg-light-yellow dib pa3 ph4-l" >Contato</a>
           </nav>
         </header>
-        
-        <ListaPresidente presidentes={this.state.presidentes}/>
        
+
+               <ListaPresidente presidentes={this.state.presidentes}/>
+               
+
 
         <footer className="pv4 ph3 ph5-m ph6-l mid-gray">
           <small className="f6 db tc">© 2016 <b className="ttu">Fora Todo Mundo</b> - Open Source Project</small>
