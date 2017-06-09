@@ -9,7 +9,7 @@ export default class Presidente extends Component{
       return (
           <article className="fl w-100 w-50-m  w-20-ns pa2-ns">
               <div className="aspect-ratio aspect-ratio--3x4 grow">
-                <img  src={this.props.foto} 
+                <img alt={this.props.nome} src={this.props.foto} 
                 className="db bg-center cover aspect-ratio--object " />
               </div>
               <a href="#0" className="ph2 ph0-ns pb3 link db">

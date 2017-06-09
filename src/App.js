@@ -34,7 +34,7 @@ class App extends Component {
   //     {id:4, nome:'Itamar Franco' , foto:'./img/Presidentes/ItamarFranco.jpg',mandato:'1992-1994'},
   //     {id:5, nome:'Fernando Henrique' , foto:'./img/Presidentes/FernandoHenrique.jpg',mandato:'1994-2002'},
   //     {id:6, nome:'Lula', foto:'./img/Presidentes/Lula.jpg', mandato:'2002-2010'},
-  //     {id:7, nome:'Dima', foto:'./img/Presidentes/Dilma.jpg', mandato:'2011-2016'},
+  //     {id:7, nome:'Dilma', foto:'./img/Presidentes/Dilma.jpg', mandato:'2011-2016'},
   //     {id:7, nome:'Temer', foto:'./img/Presidentes/Temer.jpg', mandato:'Atualidade'}
   //   ]
   // },2000);
@@ -56,9 +56,9 @@ class App extends Component {
           <h2 className="mt2 mb0 f6 fw4 ttu tracked">Tempo de mudança e oportunidades</h2>
           <nav className="bt bb tc mw7 center mt4">
             <a className="f6 f5-l link bg-animate black-80 hover-bg-lightest-blue dib pa3 ph4-l" href="/">Home</a>
-            <a className="f6 f5-l link bg-animate black-80 hover-bg-light-green dib pa3 ph4-l">Centro</a>
-            <a className="f6 f5-l link bg-animate black-80 hover-bg-light-blue dib pa3 ph4-l" >Direita</a>
-            <a className="f6 f5-l link bg-animate black-80 hover-bg-light-pink dib pa3 ph4-l" >Esquerda</a>
+            <a className="f6 f5-l link bg-animate black-80 hover-bg-light-green dib pa3 ph4-l">Esquerda</a>
+            <a className="f6 f5-l link bg-animate black-80 hover-bg-light-blue dib pa3 ph4-l" >Centro</a>
+            <a className="f6 f5-l link bg-animate black-80 hover-bg-light-pink dib pa3 ph4-l" >Direita</a>
             <a className="f6 f5-l link bg-animate black-80 hover-bg-light-yellow dib pa3 ph4-l" >Contato</a>
           </nav>
         </header>
