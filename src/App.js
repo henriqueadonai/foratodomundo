@@ -4,6 +4,8 @@ import './App.css';
 import 'tachyons';
 import ListaPresidente from './ListaPresidentes';
 import {BrowserRouter as Router,Link ,Route} from 'react-router-dom';
+import ReactGA from 'react-ga';
+
 
 
 
@@ -30,7 +32,7 @@ class App extends Component {
 }
 
   render() {
-
+    ReactGA.initialize('UA-100774275-1');
     return (
    <Router > 
           <div>
