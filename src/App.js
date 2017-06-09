@@ -3,6 +3,8 @@ import logo from './logo.svg';
 import './App.css';
 import 'tachyons';
 import ListaPresidente from './ListaPresidentes';
+import {BrowserRouter as Router,Link ,Route} from 'react-router-dom';
+
 
 
 
@@ -25,48 +27,73 @@ class App extends Component {
       {id:7, nome:'Dima', foto:'https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Dilma_Rousseff_-_foto_oficial_2011-01-09.jpg/399px-Dilma_Rousseff_-_foto_oficial_2011-01-09.jpg', mandato:'2011-2016'},
       {id:7, nome:'Temer', foto:'https://upload.wikimedia.org/wikipedia/commons/8/8e/Michel_Temer_planalto.jpg', mandato:'Atualidade'}
     ]
-
-  // setTimeout(() => {
-  //   presidentes : [
-  //     {id:1, nome:'Tancredo Neves', foto:'./img/Presidentes/TancredoNeves.jpg',mandato:'Não Assumiu'},
-  //     {id:2, nome:'Sarney' , foto:'./img/Presidentes/Sarney.jpg',mandato:'1985-1990'}, 
-  //     {id:3, nome:'Fernando Collor' , foto:'./img/Presidentes/Fernando_collor.jpg',mandato:'1990-1992'},
-  //     {id:4, nome:'Itamar Franco' , foto:'./img/Presidentes/ItamarFranco.jpg',mandato:'1992-1994'},
-  //     {id:5, nome:'Fernando Henrique' , foto:'./img/Presidentes/FernandoHenrique.jpg',mandato:'1994-2002'},
-  //     {id:6, nome:'Lula', foto:'./img/Presidentes/Lula.jpg', mandato:'2002-2010'},
-  //     {id:7, nome:'Dilma', foto:'./img/Presidentes/Dilma.jpg', mandato:'2011-2016'},
-  //     {id:7, nome:'Temer', foto:'./img/Presidentes/Temer.jpg', mandato:'Atualidade'}
-  //   ]
-  // },2000);
 }
 
   render() {
-    return (
-      <div>
 
+    return (
+   <Router > 
+          <div>
         {/*<div className="flex justify-left pa4 ">
           <h1 className="mt0 titlecolor courier">Fora Todo Mundo! Renovação!</h1>
         </div>*/}
         <header className="bg-white black-80 tc pv4 avenir">
-          <a href="" className="bg-black-80 ba b--black dib pa3 w2 h2 br-100">
+
               <title>Fora todo mundo</title>
               
-          </a>
+
           <h1 className="mt2 mb0 baskerville i fw1 f1">Fora todo mundo</h1>
           <h2 className="mt2 mb0 f6 fw4 ttu tracked">Tempo de mudança e oportunidades</h2>
-          <nav className="bt bb tc mw7 center mt4">
-            <a className="f6 f5-l link bg-animate black-80 hover-bg-lightest-blue dib pa3 ph4-l" href="/">Home</a>
-            <a className="f6 f5-l link bg-animate black-80 hover-bg-light-green dib pa3 ph4-l">Esquerda</a>
-            <a className="f6 f5-l link bg-animate black-80 hover-bg-light-blue dib pa3 ph4-l" >Centro</a>
-            <a className="f6 f5-l link bg-animate black-80 hover-bg-light-pink dib pa3 ph4-l" >Direita</a>
-            <a className="f6 f5-l link bg-animate black-80 hover-bg-light-yellow dib pa3 ph4-l" >Contato</a>
-          </nav>
+         
+            <nav className="bt bb tc mw7 center mt4">
+              <Link className="f6 f5-l link bg-animate black-80 hover-bg-lightest-blue dib pa3 ph4-l" to={'/'}>Home</Link>
+              <Link className="f6 f5-l link bg-animate black-80 hover-bg-light-green dib pa3 ph4-l" to={'/esquerda'}>Esquerda</Link>
+              <Link className="f6 f5-l link bg-animate black-80 hover-bg-light-blue dib pa3 ph4-l" to={'/centro'}>Centro</Link>
+              <Link className="f6 f5-l link bg-animate black-80 hover-bg-light-yellow dib pa3 ph4-l" to={'/direita'}>Direita</Link>
+              <Link className="f6 f5-l link bg-animate black-80 hover-bg-light-pink dib pa3 ph4-l" to={'/contato'}>Contato</Link>
+            </nav>
+         
         </header>
-       
 
-               <ListaPresidente presidentes={this.state.presidentes}/>
-               
+        <Route exact={true} path='/' render={() => (
+          <ListaPresidente presidentes={this.state.presidentes}/>
+        )}> </Route>
 
+        <Route exact={true} path="/esquerda" render={() => (
+          <div className="flex items-center justify-center pa4 bg-light-green navy">
+            <div className="pa3">
+              <a  title="Esquerda" href="https://pt.wikipedia.org/wiki/Esquerda_(pol%C3%ADtica)">Página sobre esquerda</a>
+            </div>
+          </div>
+           ) }/>
+        <Route exact={true} path="/centro" render={() => (
+          <div className="flex items-center justify-center pa4 bg-light-blue navy">
+            <div className="pa3">
+              <a  title="Centro" href="https://pt.wikipedia.org/wiki/Centro_(pol%C3%ADtica)">Página sobre centro</a>
+            </div>
+          </div>
+           ) }/>
+
+                <Route exact={true} path="/direita" render={() => (
+          <div className="flex items-center justify-center pa4 bg-light-yellow navy">
+            <div className="pa3">
+              <a  title="Direita" href="https://pt.wikipedia.org/wiki/Direita_(pol%C3%ADtica)">Página sobre Direita</a>
+            </div>
+          </div>
+           ) }/>
+          
+          <Route exact={true} path="/contato" render={() => (
+          <div className="flex items-center justify-center pa4 bg-light-pink navy">
+                <a href="mailto:" className="link b f3 f2-ns dim black-70 lh-solid">foratodomundobrasil@gmail.com</a>
+              
+
+          </div>
+           ) }/>
+
+        {/*<Route exact={true} path="/" render={() => (<h1>Welcome</h1> ) }/>
+        <Route exact={true} path="/" component={Esquerda}/>      
+        
+        */}
 
         <footer className="pv4 ph3 ph5-m ph6-l mid-gray">
           <small className="f6 db tc">© 2016 <b className="ttu">Fora Todo Mundo</b> - Open Source Project</small>
@@ -74,8 +101,9 @@ class App extends Component {
             <a href="https://github.com/henriqueadonai/foratodomundo" title="GitHub" className="f6 dib ph2 link mid-gray dim">GitHub</a>
           </div>
         </footer>
+        </div>
+    </Router>
 
-      </div>
     );
   }
 }
