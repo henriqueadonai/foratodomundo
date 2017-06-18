@@ -26,7 +26,7 @@ class App extends Component {
       {id:4, nome:'Itamar Franco' , foto:'https://upload.wikimedia.org/wikipedia/commons/b/b0/Retrato_Itamar_Franco.jpg',mandato:'1992-1994'},
       {id:5, nome:'Fernando Henrique' , foto:'https://upload.wikimedia.org/wikipedia/commons/1/14/Fhc-color.jpg',mandato:'1994-2002'},
       {id:6, nome:'Lula', foto:'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Lula_-_foto_oficial05012007_edit.jpg/400px-Lula_-_foto_oficial05012007_edit.jpg', mandato:'2002-2010'},
-      {id:7, nome:'Dima', foto:'https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Dilma_Rousseff_-_foto_oficial_2011-01-09.jpg/399px-Dilma_Rousseff_-_foto_oficial_2011-01-09.jpg', mandato:'2011-2016'},
+      {id:7, nome:'Dilma', foto:'https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Dilma_Rousseff_-_foto_oficial_2011-01-09.jpg/399px-Dilma_Rousseff_-_foto_oficial_2011-01-09.jpg', mandato:'2011-2016'},
       {id:7, nome:'Temer', foto:'https://upload.wikimedia.org/wikipedia/commons/8/8e/Michel_Temer_planalto.jpg', mandato:'Atualidade'}
     ]
 }
