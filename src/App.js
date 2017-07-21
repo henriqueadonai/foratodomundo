@@ -30,6 +30,10 @@ class App extends Component {
       {id:7, nome:'Dilma', foto:'https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Dilma_Rousseff_-_foto_oficial_2011-01-09.jpg/399px-Dilma_Rousseff_-_foto_oficial_2011-01-09.jpg', mandato:'2011-2016'},
       {id:7, nome:'Temer', foto:'https://upload.wikimedia.org/wikipedia/commons/8/8e/Michel_Temer_planalto.jpg', mandato:'Atualidade'}
     ]
+    this.state.eleicoesPres = [
+      {id:1, turno:'1', date:'2018-10-08'},
+      {id:2, turno:'2', date:'2018-10-22'}
+    ]
 }
 
   render() {
