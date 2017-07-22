@@ -31,8 +31,8 @@ class App extends Component {
       {id:7, nome:'Temer', foto:'https://upload.wikimedia.org/wikipedia/commons/8/8e/Michel_Temer_planalto.jpg', mandato:'Atualidade'}
     ]
     this.state.eleicoesPres = [
-      {id:1, turno:'1', date:'2018-10-08 12:00 AM'},
-      {id:2, turno:'2', date:'2018-10-22 12:00 AM'}
+      {id:1, turno:'1', date:'2018-10-08 12:00 AM GMT-0300'},
+      {id:2, turno:'2', date:'2018-10-22 12:00 AM GMT-0300'}
     ]
 }
 
