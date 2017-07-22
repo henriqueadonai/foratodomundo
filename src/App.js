@@ -13,16 +13,15 @@ import ReactGA from 'react-ga';
 class App extends Component {
 
   constructor(props){
-    super(props); 
+    super(props);
     this.state ={
       presidentes : [],
       eleicoes : []
     }
 
-  
     this.state.presidentes = [
       {id:1, nome:'Tancredo Neves', foto:'https://upload.wikimedia.org/wikipedia/commons/0/06/Tancredo_Neves_Official_photo.jpg',mandato:'Não Assumiu'},
-      {id:2, nome:'Sarney' , foto:'https://upload.wikimedia.org/wikipedia/commons/7/73/Sarneyoficial.jpg',mandato:'1985-1990'}, 
+      {id:2, nome:'Sarney' , foto:'https://upload.wikimedia.org/wikipedia/commons/7/73/Sarneyoficial.jpg',mandato:'1985-1990'},
       {id:3, nome:'Fernando Collor' , foto:'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Fernando_collor.jpg/450px-Fernando_collor.jpg',mandato:'1990-1992'},
       {id:4, nome:'Itamar Franco' , foto:'https://upload.wikimedia.org/wikipedia/commons/b/b0/Retrato_Itamar_Franco.jpg',mandato:'1992-1994'},
       {id:5, nome:'Fernando Henrique' , foto:'https://upload.wikimedia.org/wikipedia/commons/1/14/Fhc-color.jpg',mandato:'1994-2002'},
@@ -39,7 +38,7 @@ class App extends Component {
   render() {
     ReactGA.initialize('UA-100774275-1');
     return (
-   <Router > 
+   <Router >
           <div>
         {/*<div className="flex justify-left pa4 ">
           <h1 className="mt0 titlecolor courier">Fora Todo Mundo! Renovação!</h1>
@@ -47,11 +46,11 @@ class App extends Component {
         <header className="bg-white black-80 tc pv4 avenir">
 
               <title>Fora todo mundo</title>
-              
+
 
           <h1 className="mt2 mb0 baskerville i fw1 f1">Fora todo mundo</h1>
           <h2 className="mt2 mb0 f6 fw4 ttu tracked">Tempo de mudança e oportunidades</h2>
-         
+
             <nav className="bt bb tc mw7 center mt4">
               <Link className="f6 f5-l link bg-animate black-80 hover-bg-lightest-blue dib pa3 ph4-l" to={'/'}>Home</Link>
               <Link className="f6 f5-l link bg-animate black-80 hover-bg-light-green dib pa3 ph4-l" to={'/esquerda'}>Esquerda</Link>
@@ -59,7 +58,7 @@ class App extends Component {
               <Link className="f6 f5-l link bg-animate black-80 hover-bg-light-yellow dib pa3 ph4-l" to={'/direita'}>Direita</Link>
               <Link className="f6 f5-l link bg-animate black-80 hover-bg-light-pink dib pa3 ph4-l" to={'/contato'}>Contato</Link>
             </nav>
-         
+
         </header>
 
         <Route exact={true} path='/' render={() => (
@@ -88,18 +87,18 @@ class App extends Component {
             </div>
           </div>
            ) }/>
-          
+
           <Route exact={true} path="/contato" render={() => (
           <div className="flex items-center justify-center pa4 bg-light-pink navy">
                 <a href="mailto:" className="link b f3 f2-ns dim black-70 lh-solid">foratodomundobrasil@gmail.com</a>
-              
+
 
           </div>
            ) }/>
 
         {/*<Route exact={true} path="/" render={() => (<h1>Welcome</h1> ) }/>
-        <Route exact={true} path="/" component={Esquerda}/>      
-        
+        <Route exact={true} path="/" component={Esquerda}/>
+
         */}
 
         <footer className="pv4 ph3 ph5-m ph6-l mid-gray">
