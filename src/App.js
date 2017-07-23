@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import 'tachyons';
 import ListaPresidente from './ListaPresidentes';
+import Eleicoes from './Eleicoes';
 import {BrowserRouter as Router,Link ,Route} from 'react-router-dom';
 import ReactGA from 'react-ga';
 
@@ -56,6 +57,7 @@ class App extends Component {
               <Link className="f6 f5-l link bg-animate black-80 hover-bg-light-green dib pa3 ph4-l" to={'/esquerda'}>Esquerda</Link>
               <Link className="f6 f5-l link bg-animate black-80 hover-bg-light-blue dib pa3 ph4-l" to={'/centro'}>Centro</Link>
               <Link className="f6 f5-l link bg-animate black-80 hover-bg-light-yellow dib pa3 ph4-l" to={'/direita'}>Direita</Link>
+              <Link className="f6 f5-l link bg-animate black-80 hover-bg-light-yellow dib pa3 ph4-l" to={'/eleicoes'}>Eleições</Link>
               <Link className="f6 f5-l link bg-animate black-80 hover-bg-light-pink dib pa3 ph4-l" to={'/contato'}>Contato</Link>
             </nav>
 
@@ -87,6 +89,10 @@ class App extends Component {
             </div>
           </div>
            ) }/>
+
+           <Route exact={true} path="/eleicoes" render={() => (
+             <Eleicoes eleicoes={this.state.eleicoesPres}/>
+           )}> </Route>
 
           <Route exact={true} path="/contato" render={() => (
           <div className="flex items-center justify-center pa4 bg-light-pink navy">
