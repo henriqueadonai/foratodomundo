@@ -10,7 +10,6 @@ export default class Timer extends Component{
   }
   constructor(props){
     super(props);
-    
     var dateDiff = Date.parse(this.props.dateTo) - Date.parse(this.props.date);
     this.state = {
       days: Math.floor(dateDiff / (1000 * 60 * 60 * 24)),
@@ -21,7 +20,6 @@ export default class Timer extends Component{
   }
   render(){
     return (
-      
           <div id="clockdiv" className="dtc tc white ph3 ph4-l">
             <div>
               <span className="days">{this.state.days}</span>
@@ -40,7 +38,6 @@ export default class Timer extends Component{
               <div className="smalltext">Segundos</div>
             </div>
           </div>
-      
     )
   }
 }

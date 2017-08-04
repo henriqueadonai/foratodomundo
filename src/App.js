@@ -39,7 +39,9 @@ class App extends Component {
           <div>
         <header className="bg-white black-80 tc pv4 avenir">
 
+
                <title>Fora todo mundo</title>
+
 
 
           <h1 className="mt2 mb0 baskerville i fw1 f1">Fora todo mundo</h1>
@@ -53,6 +55,7 @@ class App extends Component {
               <Link className="f6 f5-l link bg-animate black-80 hover-bg-light-yellow dib pa3 ph4-l" to={'/direita'}>Direita</Link>
               <Link className="f6 f5-l link bg-animate black-80 hover-bg-light-pink dib pa3 ph4-l" to={'/contato'}>Contato</Link>
             </nav>
+
         </header>
 
         <Route exact={true} path='/' render={() => (
@@ -87,12 +90,9 @@ class App extends Component {
           </div>
            ) }/>
 
-
           <Route exact={true} path="/contato" render={() => (
           <div className="flex items-center justify-center pa4 bg-light-pink navy">
                 <a href="mailto:" className="link b f3 f2-ns dim black-70 lh-solid">foratodomundobrasil@gmail.com</a>
-
-
           </div>
            ) }/>
 

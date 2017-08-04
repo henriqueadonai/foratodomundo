@@ -5,6 +5,7 @@ export default class Eleicoes extends Component{
   render(){
 
     return (
+
       <article className="vh-100 dt w-100">
       {
         this.props.eleicoes.map((eleicao) => (

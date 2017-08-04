@@ -30,7 +30,7 @@ Install the dependencies and devDependencies and start the server.
 
 $ git clone https://github.com/henriqueadonai/foratodomundo.git
 $ npm install 
-$ node start
+$ npm start
 ```
 
 ### Development
