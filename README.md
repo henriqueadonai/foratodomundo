@@ -35,7 +35,7 @@ $ npm start
 
 ### Development
 
-Você contribuir? Bem vindo!
+Você pode contribuir? Bem vindo!
 ```
 
 License
