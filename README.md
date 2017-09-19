@@ -1,5 +1,5 @@
 # Fora todo mundo
-http://www.foratodomundo.com
+https://www.foratodomundo.com
 
 Fora todo mundo é um projeto Open Source com o objetivo de lembrar todos os brasileiros que teremos eleições em 2018! E temos o poder de fazer um Fora todo mundo e reiniciar o Brasil com politicos honestos e com um real interesse público.
   - Queremos explicar para todos o significado de esquerda, direita e centro
@@ -7,7 +7,8 @@ Fora todo mundo é um projeto Open Source com o objetivo de lembrar todos os bra
   - Adicionar politicos que não devem ser reeleitos, adicionando a opinião de quem apoio e não apoia
 
 # New Features para adicionarmos!
-  - Colocar os planos de governos e um forma de acompanharmos
+  - Colocar os planos de governos e um forma de acompanharmos o progresso dos planos
+  - Adicinar lista de processos em andamento
   
 Como ajudar:
   - Venha nos ajudar você é bem vindo!
