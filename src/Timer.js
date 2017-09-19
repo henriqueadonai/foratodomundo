@@ -1,23 +1,45 @@
 import React, {Component} from 'react';
+import moment from 'moment';
+
 
 export default class Timer extends Component{
   static propTypes = {
-    date: React.PropTypes.instanceOf(Date),
     dateTo: React.PropTypes.instanceOf(Date)
   }
-  static defaultProps = {
-    date: new Date()
-  }
+
   constructor(props){
     super(props);
-    var dateDiff = Date.parse(this.props.dateTo) - Date.parse(this.props.date);
     this.state = {
-      days: Math.floor(dateDiff / (1000 * 60 * 60 * 24)),
-      hours: Math.floor((dateDiff / (1000 * 60 * 60)) % 24),
-      minutes: Math.floor((dateDiff / 1000 / 60) % 60),
-      seconds: Math.floor((dateDiff / 1000) % 60)
-    }
+      days: 0,
+      hours: 0,
+      minutes: 0,
+      seconds: 0
+    };
   }
+
+  tick(){
+    const dataEleicao = moment(new Date(this.props.dateTo))
+    const duration = moment.duration(dataEleicao.diff(new Date()));
+
+    this.setState({
+      days: Math.floor(duration.asDays()),
+      hours: Math.floor(duration.asHours() % 24),
+      minutes: Math.floor(duration.asMinutes() % 60),
+      seconds: Math.floor(duration.asSeconds() % 60)
+    });
+  }
+
+  componentDidMount() {
+    this.timerID = setInterval(
+      () => this.tick(),
+      1000
+    );
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.timerID);
+  }
+
   render(){
     return (
           <div id="clockdiv" className="dtc tc white ph3 ph4-l">
